@@ -1,18 +1,24 @@
-## Getting Started
+# Vehicle Management System (Java Console Application)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Project Overview
+This project is a console-based Vehicle Rental System designed to manage vehicle inventory, client records, and rental contracts. Developed using Java, the system implements Object-Oriented Programming (OOP) principles to provide a structured, scalable backend logic for a rental business.
 
-## Folder Structure
+## Core Architecture
+The system is built on a modular class-based architecture:
 
-The workspace contains two folders by default, where:
+- **Core Entities:** 
+    - `Vehicle` (with subclasses: `Car`, `Motorcycle`, `Truck`)
+    - `Client` (with subclasses: `Person`, `Company`)
+    - `RentalContract` and `Invoice` to manage rental data, including dates and billing information.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- **Management Logic:**
+    - `VehiclesManager`: Handles vehicle CRUD operations (Add, Remove, View) and rental status tracking.
+    - `ClientsManager`: Manages client records, including editing and viewing details.
+    - `RentalManager`: Oversees the rental process, including returning vehicles, contract management, and data retrieval.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Technical Implementation
+- **Data Structures:** The system utilizes `ArrayList` from the `java.util` package for dynamic data management, allowing for flexible scaling of vehicle, client, and contract records.
+- **Algorithms:**
+    - **Linear Search:** Used for data retrieval and search operations, providing efficient performance for moderate dataset sizes.
+    - **Bubble Sort:** Implemented in the management modules to sort vehicles by rental frequency, enabling the system to generate analytics reports (e.g., most popular vehicles).
+- **OOP Principles:** The application strictly follows OOP design patterns, utilizing inheritance, encapsulation, and polymorphism to ensure clean, maintainable, and extensible code.
